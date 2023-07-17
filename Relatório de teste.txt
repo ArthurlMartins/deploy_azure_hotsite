@@ -1,0 +1,21 @@
+ROTEIRO DE TESTE
+
+TESTE DE CAIXA PRETA 
+
+1 - a página da erro ao tentar cadastrar minhas informações no formulário.
+
+2 - não acontece nada ao clicar no link "Agenda de eventos".
+
+3 - a imagem aparece menor do que deveria.
+
+4 - janela aparece onde não deveria ao clicar em um dos links.
+
+TESTE DE CAIXA BRANCA
+
+1 - problema ao colocar o src da imagem na view "index", o programa não reconhece o link digitado.
+
+2 - problema ao colocar a referencia do css, o programa não reconhece a referencia do href.
+
+3 - o script do bootstrap não esta sendo referenciado no layout, causando o mal funcionamento das modals.
+
+4 - a função .configureLogging não está sendo usado, causando assim, o mal funcionamento dos logs.
