@@ -1,0 +1,164 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+
+
+
+<div class="row">
+    <div class="col-5">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            No mundo agitado de hoje, muitas vezes negligenciamos nossa saúde em meio a compromissos e responsabilidades. No entanto, cuidar de si mesmo deve ser uma prioridade. A prevenção é a chave para uma vida saudável e feliz. Ao adotar hábitos saudáveis, como alimentação balanceada, exercícios regulares e check-ups médicos periódicos, você pode evitar o surgimento de doenças e garantir seu bem-estar a longo prazo.
+        </p>
+        <p>
+            No nosso site de cuidado de saúde, você encontrará uma variedade de recursos e informações úteis para ajudá-lo a cuidar melhor de si mesmo. Nossos artigos abrangem desde dicas de alimentação saudável até exercícios específicos para diferentes faixas etárias e condições de saúde. Além disso, fornecemos orientações sobre a importância da vacinação e medidas preventivas para evitar doenças contagiosas.
+        </p>
+    </div>
+    <div class="col-7 text-center">
+        <img src="~/idosos.jpg" alt="idosos" width="700px">
+    </div>
+</div>
+
+        
+
+<div class="row">
+    <div class="col-5 border border-light-subtle">
+        <h2>Entre em contato!</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+        <form action="/Home/Cadastrar" method="POST" style="margin: 30px;">
+            <div class="mb-3">
+                <label asp-for="Nome" class="form-label">Nome:</label>
+                <input asp-for="Nome" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email:</label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Mensagem" class="form-label">Mensagem (opcional):</label>
+                <textarea asp-for="Mensagem" class="form-control"></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input style="width: 200px;" type="submit" class="btn btn-primary" value="Enviar" />
+            </div>
+            <p>@ViewData["Cadastrado"]</p>
+        </form>
+    </div> 
+    <div class="col-7 d-flex justify-content-center align-items-center text-center" >
+        <div style="margin: 40px;">
+            <img src="https://via.placeholder.com/150" alt="150">
+            <button class="btn btn-outline-secondary" style="margin-top: 15px;" onclick="mostrarmodal('modal1')">Agenda de eventos</button>  
+            
+            <div class="modal" tabindex="-1" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1>Agenda</h1>
+                    <h3>10/10/10 10:10 - Evento 1</h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem illo a, officia inventore voluptate tenetur. Fuga amet quibusdam iusto facere et, dolore natus neque pariatur ipsa temporibus dolores, error magni.</p>
+                    <br>
+                    <h3>10/10/10 10:10 - Evento 2</h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem illo a, officia inventore voluptate tenetur. Fuga amet quibusdam iusto facere et, dolore natus neque pariatur ipsa temporibus dolores, error magni.</p>
+                    <br>
+                    <h3>10/10/10 10:10 - Evento 3</h3>
+                    <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem illo a, officia inventore voluptate tenetur. Fuga amet quibusdam iusto facere et, dolore natus neque pariatur ipsa temporibus dolores, error magni.</p>
+                    <br>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div style="margin: 40px;">
+            <img href="#" src="https://via.placeholder.com/150" alt="150">
+            <button class="btn btn-outline-secondary" style="margin-top: 15px;" onclick="mostrarmodal('modal2')">Dicas de vida saudavel</button> 
+
+            <div class="modal" tabindex="-1" id="modal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1>Dicas de Vida saudavel</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam magni, cupiditate nemo soluta ab fuga veniam sunt quidem voluptatibus blanditiis facere optio adipisci deserunt. Rerum iure reprehenderit eligendi quibusdam expedita!</p>
+                    <br>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non velit eos aliquam tenetur dolorum, at sapiente adipisci autem quos! Vel ad aperiam dolorem distinctio eligendi commodi porro molestiae qui eaque?</p>
+                    <br>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet suscipit similique a placeat vel illo possimus laborum, enim magni eveniet numquam dicta tempora, vero, ad quidem consectetur! Dolores, voluptatum laudantium.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div style="margin: 40px;">
+            <img src="https://via.placeholder.com/150" alt="150">  
+            <button class="btn btn-outline-secondary" style="margin-top: 15px;" onclick="mostrarmodal('modal3')">apoiadores</button>
+
+            <div class="modal" tabindex="-1" id="modal3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1>Apoiadores</h1>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="https://via.placeholder.com/100" alt="">
+                        </div>  
+                        <div class="col-8">
+                            <h3>Empresa 1</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="https://via.placeholder.com/100" alt="">
+                        </div>  
+                        <div class="col-8">
+                            <h3>Empresa 1</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="https://via.placeholder.com/100" alt="">
+                        </div>  
+                        <div class="col-8">
+                            <h3>Empresa 1</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarmodal(modal){
+        let el = document.getElementById(modal);
+        let modal1 = new bootstrap.Modal(el);
+        modal1.show();
+    }
+</script>
+    
+
+
+
