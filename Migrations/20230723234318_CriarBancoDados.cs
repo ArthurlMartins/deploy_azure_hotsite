@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Hotsite.Migrations
 {
@@ -12,7 +11,7 @@ namespace Hotsite.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(maxLength: 156, nullable: true),
                     Email = table.Column<string>(maxLength: 156, nullable: true),
                     Mensagem = table.Column<string>(maxLength: 512, nullable: true)

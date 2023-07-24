@@ -20,6 +20,7 @@ namespace Hotsite.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.interesse = new DatabaseContext().Interesses.ToList();
             return View();
         }
 
@@ -27,16 +28,9 @@ namespace Hotsite.Controllers
         public IActionResult Cadastrar(Interesse cad)
         {
             DatabaseService dbs = new DatabaseService();
-            try
-            {
+            
                 dbs.CadastraInteresse(cad);
                 return View("Index", cad);
-            }catch(Exception e)
-            {
-                _logger.LogError("Falha ao cadastrar: " +e.Message);
-                Console.WriteLine("Falha ao cadastrar: " +e.Message);
-            } 
-            return View("Index",cad);
         }
 
     }
