@@ -1,4 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using System;
+using System.IO;
 
 namespace Hotsite.Models
 {
@@ -6,7 +9,9 @@ namespace Hotsite.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=localhost;DataBase=Hotsite;Uid=root;Pwd=;");
+            JToken jAppSettings = JToken.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json")));
+
+            optionsBuilder.UseSqlServer(jAppSettings["ConnectionStrings"]["DefaultConnection"].ToString());
         }
 
         public DbSet<Interesse> Interesses { get; set; }
